@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="./public/iconLogo.ico" rel="shortcut icon" sizes="16x16">
+    <link href="../css/cssMain.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./imgs/fav.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация или вход на Playerok</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="container-all">
+        {{>navigation}}
+
+
+
+        <div class="logIn-container">
+            <h1 class="text-header">Регистрация или вход</h1>
+            <div class="logIn-box">
+                <div class="inputs-class">
+
+                    <div class="container_links">
+                        <div class="input-user-container">
+                            <img class="img" src="../imgs/VK.svg">
+                            <a href="/vk" class="link">Войти через Вконтакте</a>
+                        </div>
+
+                        <div class="input-user-container">
+                            <img class="img" src="../imgs/Google.svg">
+                            <a href="/google" class="link">Войти через Google</a>
+                        </div>
+                    </div>
+
+
+                    <form class="input-user-container" id="email-cl">
+                        <p class="text-input">Адрес электронной почты</p>
+                        <input class="input-in" type="email" id="inputEmail">
+                        <input type="text" style="display: none ;">
+                        <input type="text" style="display: none ;">
+                        <input type="text" style="display: none ;">
+                    </form>
+
+                    <p class="text_error"></p>
+                </div>
+                <button class="button-submit" id="buttSubmit">Получить код</button>
+                <p class="text-bottom">Продолжая регистрацию или вход, вы принимаете условия <a>Пользовательского
+                        соглашения</a> и <a>Политики конфиденциальности</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="email-code-container">
+        <p class="text-log">Вход</p>
+
+        <svg class="svg-class" id="closeWindowCode" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.5859 12.0001L5.29297 6.70718L6.70718 5.29297L12.0001 10.5859L17.293 5.29297L18.7072 6.70718L13.4143 12.0001L18.7072 17.293L17.293 18.7072L12.0001 13.4143L6.70718 18.7072L5.29297 17.293L10.5859 12.0001Z"
+                fill="white"></path>
+        </svg>
+        <img class="keyImg" src="../imgs/Key.webp">
+        <div class="containerBottom">
+            <p class="headerText">Введите код из почты</p>
+            <p class="text-email" id="emailText"></p>
+
+            <div class="numbers-container">
+                <div class="number-verifi">
+                    <input type="number" value="" id="firstInputCode">
+
+                </div>
+                <div class="number-verifi">
+                    <input type="number" value="">
+                </div>
+                <div class="number-verifi">
+                    <input type="number" value="">
+                </div>
+
+                <div class="number-verifi">
+                    <input type="number" value="">
+                </div>
+
+                <div class="number-verifi">
+                    <input type="number" value="">
+                </div>
+
+                <div class="number-verifi">
+                    <input type="number" value="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="blur-container"></div>
+</body>
+
+
+
+
+
+
+</html>
+
+<script>
+    let elem = document.querySelector("#inputEmail")
+    setInterval(() => {
+        elem.style.textCss = "backgoundColor:blue !important;"
+    }, 100)
+</script>
+
+
+
+
+<script src='../scripts/SendData.js'></script>
